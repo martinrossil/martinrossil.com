@@ -1,0 +1,25 @@
+{
+  "name": "martinrossil.com",
+  "version": "1.0.0",
+  "description": "Martin Rossil personal website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinrossil/martinrossil.com.git"
+  },
+  "keywords": [
+    "PWA",
+    "Typescript",
+    "CustomeElements",
+    "FSM"
+  ],
+  "author": "Martin Rossil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martinrossil/martinrossil.com/issues"
+  },
+  "homepage": "https://github.com/martinrossil/martinrossil.com#readme"
+}
