@@ -4,6 +4,7 @@
   "description": "Martin Rossil personal website.",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint src/**/*",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"testing build\""
   },
@@ -22,5 +23,18 @@
   "bugs": {
     "url": "https://github.com/martinrossil/martinrossil.com/issues"
   },
-  "homepage": "https://github.com/martinrossil/martinrossil.com#readme"
+  "homepage": "https://github.com/martinrossil/martinrossil.com#readme",
+  "dependencies": {
+    "unami": "0.0.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.12.0",
+    "@typescript-eslint/parser": "^4.12.0",
+    "eslint": "^7.17.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "typescript": "^4.1.3"
+  }
 }
