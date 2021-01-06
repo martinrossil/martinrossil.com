@@ -1,6 +1,6 @@
 {
   "name": "martinrossil.com",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Martin Rossil personal website.",
   "scripts": {
     "dev": "rollup -c rollup.development.js --watch",
