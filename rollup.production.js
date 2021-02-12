@@ -5,7 +5,7 @@ import copy from 'rollup-plugin-copy';
 import compiler from '@ampproject/rollup-plugin-closure-compiler';
 import filesize from 'rollup-plugin-filesize';
 import typescript from 'rollup-plugin-typescript2';
-// import strip from '@rollup/plugin-strip';
+import strip from '@rollup/plugin-strip';
 export default {
         input: './src/MartinRossil.ts',
         // eslint-disable-next-line
@@ -32,13 +32,13 @@ export default {
                     }
                 ]
             }),
-            typescript({ tsconfig: 'tsconfig.production.json' })// ,
-            // strip({ include: '**/*.ts' })
+            typescript(),
+            strip({ include: '**/*.ts' }),
+            filesize({ showBrotliSize: true })
         ],
         output: [
             {
                 entryFileNames: '[name].' + version + '.es2019.js',
-                chunkFileNames: '[name].' + version + '.es2019.js',
                 dir: './public/',
                 format: 'esm',
                 plugins: [
@@ -46,13 +46,11 @@ export default {
                         language_in: 'ECMASCRIPT_NEXT',
                         compilation_level: 'ADVANCED',
                         language_out: 'ECMASCRIPT_2019'
-                    }),
-                    filesize({ showBrotliSize: true })
+                    })
                 ]
             },
             {
                 entryFileNames: '[name].' + version + '.es2018.js',
-                chunkFileNames: '[name].' + version + '.es2018.js',
                 dir: './public/',
                 format: 'esm',
                 plugins: [
@@ -60,13 +58,11 @@ export default {
                         language_in: 'ECMASCRIPT_NEXT',
                         compilation_level: 'ADVANCED',
                         language_out: 'ECMASCRIPT_2018'
-                    }),
-                    filesize({ showBrotliSize: true })
+                    })
                 ]
             },
             {
                 entryFileNames: '[name].' + version + '.es2017.js',
-                chunkFileNames: '[name].' + version + '.es2017.js',
                 dir: './public/',
                 format: 'esm',
                 plugins: [
@@ -74,13 +70,11 @@ export default {
                         language_in: 'ECMASCRIPT_NEXT',
                         compilation_level: 'ADVANCED',
                         language_out: 'ECMASCRIPT_2017'
-                    }),
-                    filesize({ showBrotliSize: true })
+                    })
                 ]
             },
             {
                 entryFileNames: '[name].' + version + '.es2016.js',
-                chunkFileNames: '[name].' + version + '.es2016.js',
                 dir: './public/',
                 format: 'esm',
                 plugins: [
@@ -88,13 +82,11 @@ export default {
                         language_in: 'ECMASCRIPT_NEXT',
                         compilation_level: 'ADVANCED',
                         language_out: 'ECMASCRIPT_2016'
-                    }),
-                    filesize({ showBrotliSize: true })
+                    })
                 ]
             },
             {
                 entryFileNames: '[name].' + version + '.es2015.js',
-                chunkFileNames: '[name].' + version + '.es2015.js',
                 dir: './public/',
                 format: 'esm',
                 plugins: [
@@ -102,8 +94,7 @@ export default {
                         language_in: 'ECMASCRIPT_NEXT',
                         compilation_level: 'ADVANCED',
                         language_out: 'ECMASCRIPT_2015'
-                    }),
-                    filesize({ showBrotliSize: true })
+                    })
                 ]
             },
             {
@@ -116,8 +107,7 @@ export default {
                         language_in: 'ECMASCRIPT_NEXT',
                         compilation_level: 'ADVANCED',
                         language_out: 'ECMASCRIPT5'
-                    }),
-                    filesize({ showBrotliSize: true })
+                    })
                 ]
             }
         ]
