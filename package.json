@@ -47,6 +47,6 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "unami": "0.0.1"
+    "unami": "^0.1.1"
   }
 }
